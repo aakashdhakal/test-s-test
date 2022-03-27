@@ -1,0 +1,268 @@
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login - Aakash Dhakal</title>
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script type="text/javascript" src="JS/script.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One|Kanit|Varela Round|Monda|Asap|Fredoka|Poppins|Source Code Pro|Supermercado One">
+      <script src="https://kit.fontawesome.com/e7e64de2ec.js" crossorigin="anonymous" async></script>
+   </head>
+   <body>
+      <section class="login">
+         <div class="container">
+            <div class="forms-container">
+              <div class="signin-signup">
+                <form action="#" class="sign-in-form">
+                  <h2 class="title">Sign in</h2>
+                  <hr>
+                  <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" id="username1"/>
+                  </div>
+                  <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" id="password"/>
+                  </div>
+                  <input type="checkbox" id="loggedin">
+<label for="loggedin">Remember me</label>
+                  <input type="submit" value="Login" class="btn solid" id="submitBtn1"/>
+                  <p class="social-text">Or Sign in with social platforms</p>
+                  <div class="social-media">
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </form>
+                <form action="#" class="sign-up-form">
+                  <h2 class="title">Sign up</h2>
+                  <hr>
+                  <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" id="username"/>
+                  </div>
+                  <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" id="email"/>
+                  </div>
+                  <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" id="password" />
+                  </div>
+                  <input type="submit" class="btn" value="Sign up" id="submitBtn"/>
+                  <p class="social-text">Or Sign up with social platforms</p>
+                  <div class="social-media">
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+      
+            <div class="panels-container">
+              <div class="panel left-panel">
+                <div class="content">
+                  <h3>New here ?</h3>
+                  <p>
+                    Sign up to create an account
+                  </p>
+                  <button class="btn transparent" id="sign-up-btn">
+                    Sign up
+                  </button>
+                </div>
+                <img src="login.png" class="image" alt="" />
+              </div>
+              <div class="panel right-panel">
+                <div class="content">
+                  <h3>One of us ?</h3>
+                  <p>
+                    Sign in to login to your account
+                  </p>
+                  <button class="btn transparent" id="sign-in-btn">
+                    Sign in
+                  </button>
+                </div>
+                <img src="login.png" class="image" alt="" />
+              </div>
+            </div>
+          </div>
+      </section>
+      <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+  import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAQhP_x3_wUDlgZwnGS6ZvMkW2qTZcI1EQ",
+    authDomain: "aakash-63f79.firebaseapp.com",
+    databaseURL: "https://aakash-63f79-default-rtdb.firebaseio.com",
+    projectId: "aakash-63f79",
+    storageBucket: "aakash-63f79.appspot.com",
+    messagingSenderId: "286257139877",
+    appId: "1:286257139877:web:a1cfce164efdc26a6e7d4c",
+    measurementId: "G-SD2S18YH9C"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase();
+
+  //Get references
+
+  const email = document.getElementById("email");
+  const username = document.getElementById("username");
+  const pass = document.getElementById("password");
+  const submit = document.getElementById("submitBtn");
+
+  //Validation
+  function isEmptyOrSpaces(str){
+    return str === null || str.match(/^ *$/) !== null;
+  }
+
+    function Validation(){
+  
+      let emailregex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook).com$/;
+      let userregex = /^[a-zA-Z0-9]{5,}$/;
+
+      if(isEmptyOrSpaces(username.value) || isEmptyOrSpaces(email.value) || isEmptyOrSpaces(pass.value)){
+        alert("You cannot leave any field empty");
+        return false;
+      }
+
+      if(!userregex.test(username.value)){
+        alert("username can only be alphanumeric\n-username must be atleast 5 characters\n-username cannot contain spaces!");
+        return false;
+      }
+      if(!emailregex.test(email.value)){
+        alert("enter a valid email");
+        return false;
+      }
+
+      return true;
+    }
+    //register
+
+      
+    function Registeruser(){
+      if (!Validation()){
+        return;
+      };
+      const dbref = ref(db);
+
+      get(child(dbref, "UsersList/"+ username.value)).then((snapshot)=>{
+        if(snapshot.exists()){
+          alert("Account already exists");
+        }
+
+        else{
+          set(ref(db, "UsersList/"+ username.value),
+          {
+            username: username.value,
+            email: email.value,
+            password: encPass()
+          })
+          .then(() =>{
+            alert("User is added successfully")
+          })
+          .catch((error)=>{
+            alert("error"+error);
+          })
+        }
+      });
+    }
+
+    function encPass(){
+      var pass12 = CryptoJS.AES.encrypt(pass.value, pass.value);
+      return pass12.toString();
+    }
+
+    submit.addEventListener("click", Registeruser);
+
+//Login process
+
+
+  const username1 = document.getElementById("username1");
+  const pass1 = document.getElementById("password");
+  const submit1 = document.getElementById("submitBtn1");
+ 
+
+
+  function AuthenticateUser(){
+    const dbref = ref(db);
+
+    get(child(dbref, "UsersList/"+ username1.value)).then((snapshot) => {
+        if(snapshot.exists()){
+          let dbpass = decPass(snapshot.val().password);
+          if(dbpass == pass1.value){
+            login(snapshot.val());
+          }
+          else{
+            alert("User doesnot exists");
+          }
+        }
+        else{
+            alert("username or password is invalid");
+          }
+      });
+    }
+
+    function decPass(dbpass){
+      var pass12 = CryptoJS.AES.decrypt(dbpass, pass1.value);
+      return pass12.toString(CryptoJS.enc.Utf8);
+    }
+
+    function login(user){
+      let keepLoggedIn = document.getElementById("loggedin").checked;
+
+      if(!keepLoggedIn){
+        sessionStorage.setItem("user", JSON.stringify(user));
+        window.location = "index.html";
+      }
+
+      else {
+        localStorage.setItem("keepLoggedIn", "yes");
+        localStorage.setItem("user", JSON.stringify(user));
+        window.location = "index.html";
+      }
+
+    }
+    submit1.addEventListener("click", AuthenticateUser);
+
+    if (new URLSearchParams(window.location.search).get("callFunction") === "specialFunction"){
+    container.classList.add("sign-up-mode");
+    }
+
+
+
+      </script>
+      </body>
+      </html>
+       

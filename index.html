@@ -1,0 +1,334 @@
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Blogs - Aakash Dhakal</title>
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="JS/script.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One|Kanit|Varela Round|Monda|Asap|Fredoka|Poppins|Source Code Pro|Supermercado One">
+      <script src="https://kit.fontawesome.com/e7e64de2ec.js" crossorigin="anonymous" async></script>
+   </head>
+   <body>
+      <section id="navigation" class="navigation">
+         <header>
+            <nav class="navbar">
+               <div class="max-width">
+                  <div class="nav-container">
+                  <div class="logo-container">
+                     <a href="#">
+                        <h1 class="header">Aakash Dhakal's <span>Blogs</span></h1>
+                     </a>
+                  </div>
+                  <ul class="nav-links">
+                     <li><a href="https://aakashdhakal.me/" class="nav-button">Home</a></li>
+                     <li><a href="." id="active">Blogs</a></li>
+                     <li><a href="https://aakashdhakal.me/about.html" class="nav-button">About Me</a></li>
+                <li><a href="." id="userlink">Username</a></li>
+                     <li><a onclick="Signout()" id="signoutlink">Log Out</a></li>
+                     <li>
+                        <label class="switch" for="checkbox">
+                           <input type="checkbox" id="checkbox" />
+                           <div class="slider round"></div>
+                         </label>
+                     </li>
+                  </ul>
+                  </div>
+                  </div>
+            </nav>
+         </header>
+      </section>
+      <section class="welcome">
+         <div class="max-width">
+            <div class="welcome-container">
+               <div class="welcome-des">
+                  <h1>Welcome to my blogs</h1>
+                  <br>
+                  <h4>" A place to write random things that comes to my mind but is empty all the time which is not my mind"</h4>
+                  <br>
+                  <p>What are you looking for?</p>
+                  <button type="search" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  <input type="text" placeholder="Search">
+               </div>
+
+            </div>
+         </div>
+      </section>
+      <section class="blogs">
+         <div class="max-width">
+            <div class="blog-container">
+               <div class="left-side">
+                  <h1>Recent Posts</h1>
+                  <hr>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="blog-wrapper">
+                  <div class="blog-card">
+                     <div class="blog-header">
+                        <div class="header-img">
+                           <span class="date">1m ago</span>
+                        <img src="AI.jpg" alt="thumbnail" class="thumbnail">
+                     </div>
+  
+                        <div class="header-des">
+                        <h3>Artificial Intelligence</h3>
+                        <br>
+                        <p>Artificial intelligence (AI) is the ability of a digital computer or computer-controlled robot to . . .   <a href="#">
+                           <button id="read">Read more</button>
+                           </a></p>
+                     </div>
+                     </div>
+                     <hr>
+                     <div class="like">
+                        <p><i class="fa-regular fa-thumbs-up"></i>&nbsp0</p>
+                        <p><i class="fa-regular fa-comment"></i>&nbsp0</p>
+
+                     </div>
+                     <div class="blog-footer">
+                        <div class="author-img">
+                           <img src="Images/profile.png">
+                        </div>
+                        <br>
+                        <div class="author-name">
+                           <h5>Aakash Dhakal</h5>
+                           <small>18 MAR 2022</small>
+                         </div>
+                     </div>
+                     <span class="tag">Technology</span>
+                     <span class="tag">AI</span>
+                  </div>
+                  <div class="blog-card">
+                     <div class="blog-header">
+                        <div class="header-img">
+                           <span class="date">1m ago</span>
+                        <img src="IT.png" alt="thumbnail" class="thumbnail">
+                     </div>
+  
+                        <div class="header-des">
+                        <h3>IT study in Nepal</h3>
+                        <br>
+                        <p>Technology has been one of the most important infrastructure of development all around the  . . .   <a href="#">
+                           
+                           <button id="read">Read more</button>
+                           </a></p>
+                     </div>
+                     </div>
+                     <hr>
+                     <div class="like">
+                        <p><i class="fa-regular fa-thumbs-up"></i>&nbsp0</p>
+                        <p><i class="fa-regular fa-comment"></i>&nbsp0</p>
+
+                     </div>
+                     <div class="blog-footer">
+                        <div class="author-img">
+                           <img src="Images/profile.png">
+                        </div>
+                        <br>
+                        <div class="author-name">
+                           <h5>Aakash Dhakal</h5>
+                           <small>18 MAR 2022</small>
+                         </div>
+                     </div>
+                     <span class="tag">Technology</span>
+                     <span class="tag">AI</span>
+                  </div>
+                  <div class="blog-card">
+                     <div class="blog-header">
+                        <div class="header-img">
+                           <span class="date">1m ago</span>
+                        <img src="nepal.png" alt="thumbnail" class="thumbnail">
+                     </div>
+  
+                        <div class="header-des">
+                        <h3>Nepal: A country of religious tolorence</h3>
+                        <br>
+                        <p>Nepal is a country known for its cultural and religious diversity . . .   <a href="#">
+                           <button id="read">Read more</button>
+                           </a></p>
+                     </div>
+                     </div>
+                     <hr>
+                     <div class="like">
+                        <p><i class="fa-regular fa-thumbs-up"></i>&nbsp0</p>
+                        <p><i class="fa-regular fa-comment"></i>&nbsp0</p>
+
+                     </div>
+                     <div class="blog-footer">
+                        <div class="author-img">
+                           <img src="Images/profile.png">
+                        </div>
+                        <br>
+                        <div class="author-name">
+                           <h5>Aakash Dhakal</h5>
+                           <small>18 MAR 2022</small>
+                         </div>
+                     </div>
+                     <span class="tag">Nepal</span>
+                     <span class="tag">Religious Tolorence</span>
+                  </div>
+               </div>
+            </div>
+               <div class="right-side">
+                  <div class="header1">
+                  <h1>Popular Posts</h1>
+               </div>
+                  <hr>
+                  <div class="blog-list">
+                     <a href="#"><h1>1. Artificial Intelligence</h1></a>
+                        <p>&nbsp&nbsp&nbsp&nbsp<i class="fa-regular fa-clock"></i>&nbsp18 MAR 2022</p>
+                        <p>&nbsp&nbsp&nbsp&nbsp<i class="fa-solid fa-user-pen"></i>&nbspAakash Dhakal</p>
+                        <br>
+                        <a href="#"><h1>2. IT Study in Nepal</h1></a>
+                        <p>&nbsp&nbsp&nbsp&nbsp<i class="fa-regular fa-clock"></i>&nbsp18 MAR 2022</p>
+                        <p>&nbsp&nbsp&nbsp&nbsp<i class="fa-solid fa-user-pen"></i>&nbspAakash Dhakal</p>
+                        <br>
+                        <a href="#"><h1>3. Nepal: A country of religious &nbsp&nbsp&nbsp&nbsptolorence</h1></a>
+                        <p>&nbsp&nbsp&nbsp&nbsp<i class="fa-regular fa-clock"></i>&nbsp18 MAR 2022</p>
+                        <p>&nbsp&nbsp&nbsp&nbsp<i class="fa-solid fa-user-pen"></i>&nbspAakash Dhakal</p>
+                        <br>
+                        <a href="#"><h1>4. Title of the blog</h1></a>
+                        <p>&nbsp&nbsp&nbsp&nbsp<i class="fa-regular fa-clock"></i>&nbsp18 MAR 2022</p>
+                        <p>&nbsp&nbsp&nbsp&nbsp<i class="fa-solid fa-user-pen"></i>&nbspAakash Dhakal</p>
+                        <br>
+                        <a href="#"><h1>5. Title of the blog</h1></a>
+                        <p>&nbsp&nbsp&nbsp&nbsp<i class="fa-regular fa-clock"></i>&nbsp18 MAR 2022</p>
+                        <p>&nbsp&nbsp&nbsp&nbsp<i class="fa-solid fa-user-pen"></i>&nbspAakash Dhakal</p>
+                        <br>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="message">
+         <div class="max-width">
+            <div class="msg-container">
+               <div class="form">
+                  <div class="send-title">
+                  <h1>Get in touch</h1>
+                  <hr>
+               </div>
+                  <form action="#">
+                     <div class="name">
+                        <p>Name<span>*</span></p>
+                        <input type="text" placeholder="Ram" id="name">
+                     </div>
+                     <div class="email">
+                        <p>E-mail<span>*</span></p>
+                        <input type="email" placeholder="abc@gmail.com" id="email">
+                     </div>
+                     <div class="msg">
+                        <p>Message<span>*</span></p>
+                        <textarea rows="2" cols="30" type="text" placeholder="Hello" id="message"></textarea>
+                     </div>
+                     <div class="btn">
+                        <button type="submit" id="submit">Send</button>
+                      </div>
+                  </form>
+               </div>
+               <div class="contact-details">
+                  <div class="send-title">
+                     <h1>Address</h1>
+                     <hr>
+                  </div>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">Kageshwori Manahara-8, Kathmandu</span>
+            </div>
+            <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+977-9866401330</span>
+            </div>
+            <div class="email-2">
+              <span class="fas fa-envelope"></span>
+              <span class="text">contact@aakashdhakal.com.np</span>
+            </div>
+          </div>
+
+               </div>
+              
+            </div>
+         </div>
+      </section>
+      <section class="footer">
+         <footer>
+            <div class="max-width">
+               <div class="footer-container">
+                  <div class="left">
+                     <h1>Aakash Dhakal's <span>Blogs</span></h1>
+                     <br>
+                                          <ul class="nav-links">
+                        <li><a href="https://aakashdhakal.me/" class="nav-button">Home<span>&nbsp|</span></a></li>
+                        <li><a href="." id="active">&nbspBlogs<span>&nbsp|</span></a></li>
+                        <li><a href="https://aakashdhakal.me/about.html" class="nav-button">&nbspAbout Me<span>&nbsp|</span></a></li>
+                        <li>
+                           <a href="https://aakashdhakal.me/about.html" class="nav-button">&nbspContact</a>
+                        </li>
+                     </ul>
+                  </div>
+            </div>
+            </div>
+            <div class="bottom">
+               <p>Copyright &copy <a href="#">Aakash Dhakal</a> | All rights reserved</p>
+            </div>
+         </footer>
+      </section>
+      <script>
+
+const userlink = document.getElementById("userlink");
+const signoutlink = document.getElementById("signoutlink");
+var container = document.querySelector(".container");
+
+  var currentUser = null;
+
+         function getUsername(){
+            let keepLoggedIn = localStorage.getItem("keepLoggedIn");
+
+            if(keepLoggedIn == "yes"){
+               currentUser = JSON.parse(localStorage.getItem("user"));
+            }
+            else{
+               currentUser = JSON.parse(sessionStorage.getItem("user"));
+            }
+         }
+
+         function Signout(){
+            sessionStorage.removeItem("user");         
+            localStorage.removeItem("user");
+            localStorage.removeItem("keepLoggedIn");
+            window.location = "index.html";
+         }
+
+
+         window.onload = function(){
+            getUsername();
+            if(currentUser == null){
+
+               signoutlink.innerText = "Log In";
+               signoutlink.classList.add = "btn"
+               signoutlink.href = "login.html";
+               
+
+
+               userlink.innerText = "Create an account";
+               userlink.href = "javascript:Signup()";
+
+            }
+
+            else{
+               userlink.innerText = currentUser.username;
+               userlink.href = "#";
+
+               signoutlink.href = "javascript:Signout()";
+              
+            }
+         }
+         function Signup(){
+            window.location.replace("login.html?callFunction=specialFunction");
+         }
+
+      </script>
+      </body>
+      </html>
